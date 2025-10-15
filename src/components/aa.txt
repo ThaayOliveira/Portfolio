@@ -1,0 +1,4 @@
+I have worked on the development of complete systems using different stacks, such as PHP with Laravel, participating in everything from data modeling to the delivery of complex functionalities.
+I developed robust solutions with Java (Spring Boot) on the back-end, and with TypeScript, React, and Next.js on the front-end, building modern, responsive, and scalable applications.
+Additionally, I handled other demands with a focus on data analysis, utilizing Power BI to create interactive dashboards, customized reports, and generate strategic insights to support decision-making.
+To complement my technical background, I completed courses focused on microdata processing and the R programming language, enhancing my ability to work with large volumes of data and perform statistical analysis.
