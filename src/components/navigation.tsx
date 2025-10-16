@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
@@ -24,6 +26,25 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    setIsMobileMenuOpen(false)
+
+    const targetId = href.replace("#", "")
+    const targetElement = document.getElementById(targetId)
+
+    if (targetElement) {
+      const navHeight = 10
+      const extraOffset = 3 
+      const targetPosition = targetElement.offsetTop - navHeight - extraOffset
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      })
+    }
+  }
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -41,6 +62,7 @@ export function Navigation() {
               <a
                 key={item.name}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.name}
@@ -59,13 +81,13 @@ export function Navigation() {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in">
+          <div className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in bg-background rounded-lg px-4 border border-border">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
               </a>
