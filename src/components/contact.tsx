@@ -30,7 +30,7 @@ export function Contact() {
             <Button size="lg" asChild className="transition-transform hover:scale-105">
               <a href="mailto:thayanneoliveira2002@gmail.com">
                 <Mail className="h-5 w-5 mr-2" />
-                Say Hello
+                Contact
               </a>
             </Button>
 

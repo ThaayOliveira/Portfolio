@@ -13,32 +13,32 @@ const projects = [
       "Statewide service management system developed to organize and evaluate public services across multiple agencies and categories. The platform allows centralized control of registered institutions, service types, and performance indicators, enabling data-driven assessments of the services offered. Designed with scalability and usability in mind, the system streamlines the monitoring of service quality and supports decision-making processes aimed at improving public management efficiency.",
     image: "/portal-de-servicos.png",
     technologies: ["Next.js", "Java", "PostgreSQL", "Typescript", "Docker", "Kubernetes", "Argo", "Github Actions", "Pyhton"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    // github: "https://github.com",
+    // demo: "https://example.com",
   },
   {
     title: "Locadora",
     description:
       "Collaborative task management application with real-time updates and team workspaces, developed as a project for a rental store system designed to manage both new and classic movies and games.",
-    image: "/task-management-kanban.png",
+    image: "/locadora.png",
     technologies: ["React", "Express", "MongoDB", "Socket.io", "AWS"],
-    github: "https://github.com",
-    demo: "vercel",
+    // github: "https://github.com/ThaayOliveira/projeto-locadora",
+    // demo: "vercel",
   },
   {
     title: "Macros - Contador de Calorias",
     description:
       "Mobile application developed with React Native and Firebase, designed to promote health and well-being within the community. The app calculates the Basal Metabolic Rate (BMR), Body Mass Index (BMI), and provides a personalized meal distribution plan, helping users define and track their goals effectively. With an intuitive interface and real-time data storage through Firebase, the project aims to simplify health monitoring and encourage healthier lifestyle habits.",
-    image: "/ai-content-writing-interface.png",
+    image: "/macros-telas.png",
     technologies: ["React native", "Firebase"],
-    github: "https://github.com",
-    demo: "vercel",
+    // github: "https://github.com",
+    // demo: "vercel",
   },
   {
     title: "Power BI",
     description:
       "Real-time analytics dashboard designed to track and visualize key business metrics. Developed using Power BI for dynamic data visualization and automated reporting, integrating data from PostgreSQL and Oracle databases through Python scripts for seamless updates and process automation. The user interface and layout were carefully designed in Figma, ensuring a clean, intuitive, and responsive experience for end users.",
-    image: "/analytics-dashboard-charts.png",
+    image: "/power-bi.png",
     technologies: ["Power BI", "Oracle", "Python", "Figma"],
   },
 ]
@@ -86,7 +86,7 @@ export function Projects() {
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -107,18 +107,18 @@ export function Projects() {
                   </div>
 
                   <div className="flex gap-3 pt-2">
-                    <Button variant="outline" size="sm" asChild>
+                    {/* <Button variant="outline" size="sm" asChild>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4 mr-2" />
                         Code
                       </a>
-                    </Button>
-                    <Button size="sm" asChild>
+                    </Button> */}
+                    {/* <Button size="sm" asChild>
                       <a href={project.demo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
                       </a>
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               </Card>
