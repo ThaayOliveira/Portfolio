@@ -20,14 +20,13 @@ export function Hero() {
           <div className="space-y-4">
             <p className="text-accent text-sm font-mono">Hi, my name is</p>
             <h1 className="text-5xl md:text-7xl font-bold text-foreground text-balance">Thayanne Oliveira</h1>
-            <h2 className="text-3xl md:text-5xl font-bold text-muted-foreground text-balance">
-              Full stack Developer
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-muted-foreground text-balance">Full stack Developer</h2>
           </div>
 
           <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            I'm a Full Stack Developer focused on designing and building scalable, high-performance web applications using modern technologies.
-            I work across both front-end and back-end development to deliver complete, efficient solutions.
+            I'm a Full Stack Developer focused on designing and building scalable, high-performance web applications
+            using modern technologies. I work across both front-end and back-end development to deliver complete,
+            efficient solutions.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -68,7 +67,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute sm:bottom-2 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
           <a href="#about" aria-label="Scroll to about section">
             <ArrowDown className="h-6 w-6 text-muted-foreground" />
           </a>
