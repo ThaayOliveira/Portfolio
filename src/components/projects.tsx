@@ -10,7 +10,7 @@ const projects = [
   {
     title: "Portal de Serviços",
     description:
-      "Statewide service management system developed to organize and evaluate public services across multiple agencies and categories. The platform allows centralized control of registered institutions, service types, and performance indicators, enabling data-driven assessments of the services offered. Designed with scalability and usability in mind, the system streamlines the monitoring of service quality and supports decision-making processes aimed at improving public management efficiency.",
+      "Statewide service management system developed to organize and evaluate public services across multiple government agencies and categories. The platform allows centralized control of registered institutions, service types, and performance indicators, enabling data-driven assessments enhanced by Google Analytics integration. Designed with scalability and usability in mind, the system streamlines the monitoring of service quality and supports decision-making processes aimed at improving public management efficiency.",
     image: "/portal-de-servicos.png",
     technologies: ["Next.js", "Java", "PostgreSQL", "Typescript", "Docker", "Kubernetes", "Argo", "Github Actions", "Pyhton"],
     // github: "https://github.com",
@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Locadora",
     description:
-      "Collaborative task management application with real-time updates and team workspaces, developed as a project for a rental store system designed to manage both new and classic movies and games.",
+      "Collaborative task management application with real-time updates and team workspaces, developed as part of a rental store system designed to manage both new and classic movies and games. The platform includes a shopping cart system for purchasing titles, as well as user account creation and management features, providing a complete experience for browsing, renting, and buying entertainment content.",
     image: "/locadora.png",
     technologies: ["React", "Express", "MongoDB", "Socket.io", "AWS"],
     // github: "https://github.com/ThaayOliveira/projeto-locadora",
@@ -30,7 +30,7 @@ const projects = [
     description:
       "Mobile application developed with React Native and Firebase, designed to promote health and well-being within the community. The app calculates the Basal Metabolic Rate (BMR), Body Mass Index (BMI), and provides a personalized meal distribution plan, helping users define and track their goals effectively. With an intuitive interface and real-time data storage through Firebase, the project aims to simplify health monitoring and encourage healthier lifestyle habits.",
     image: "/macros-telas.png",
-    technologies: ["React native", "Firebase"],
+    technologies: ["React native", "Firebase", "Typescript"],
     // github: "https://github.com",
     // demo: "vercel",
   },

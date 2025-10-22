@@ -24,7 +24,7 @@ const experiences = [
   {
     title: "Front-end Developer",
     company: "Freelancer",
-    period: "2018 — 2020",
+    period: "2022 - 2023",
     description:
       "Developed responsive websites and web applications for various clients. Collaborated with designers to create pixel-perfect implementations.",
     technologies: ["React", "Javascript", "Wordpress Elementor"],
