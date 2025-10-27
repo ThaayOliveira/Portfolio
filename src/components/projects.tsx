@@ -12,7 +12,7 @@ const projects = [
     description:
       "Statewide service management system developed to organize and evaluate public services across multiple government agencies and categories. The platform allows centralized control of registered institutions, service types, and performance indicators, enabling data-driven assessments enhanced by Google Analytics integration. Designed with scalability and usability in mind, the system streamlines the monitoring of service quality and supports decision-making processes aimed at improving public management efficiency.",
     image: "/portal-de-servicos.png",
-    technologies: ["Next.js", "Java", "PostgreSQL", "Typescript", "Docker", "Kubernetes", "Argo", "Github Actions", "Pyhton"],
+    technologies: ["Next.js", "Java", "PostgreSQL", "Typescript", "Docker", "Kubernetes", "Argo", "Github Actions", "Python"],
     // github: "https://github.com",
     // demo: "https://example.com",
   },
