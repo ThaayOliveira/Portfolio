@@ -13,12 +13,12 @@ const skillCategories = [
   {
     title: "Backend",
     icon: Database,
-    skills: ["Java", "Node.js", "PostgreSQL", "Oracle", "C#", "C", "C++", "Python", "REST APIs"],
+    skills: ["Java", "Node.js", "PostgreSQL", "C#", "C", "C++", "Python", "REST APIs"],
   },
   {
     title: "DevOps & Cloud",
     icon: Cloud,
-    skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Github Actions", "Argo", "Firebase", "MongoDB", "Supabase"],
+    skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Github Actions", "Argo", "Firebase", "MongoDB", "Oracle", "Supabase"],
   },
   {
     title: "Tools & Others",

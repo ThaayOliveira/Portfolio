@@ -188,3 +188,30 @@
 .animate-scale-in {
   animation: scale-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.animate-scroll-slow {
+  animation: scroll 60s linear infinite;
+}
+
+.animate-scroll-slow:hover {
+  animation-play-state: paused;
+}
