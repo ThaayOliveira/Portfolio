@@ -6,10 +6,28 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
+  const [displayedText, setDisplayedText] = useState("")
+  const fullText = "Full Stack Developer"
 
   useEffect(() => {
     setIsVisible(true)
   }, [])
+
+  useEffect(() => {
+    if (!isVisible) return
+
+    let index = 0
+    const interval = setInterval(() => {
+      if (index <= fullText.length) {
+        setDisplayedText(fullText.slice(0, index))
+        index++
+      } else {
+        clearInterval(interval)
+      }
+    }, 90)
+
+    return () => clearInterval(interval)
+  }, [isVisible])
 
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-20">
@@ -20,7 +38,10 @@ export function Hero() {
           <div className="space-y-4">
             <p className="text-accent text-sm font-mono">Hi, my name is</p>
             <h1 className="text-5xl md:text-7xl font-bold text-foreground text-balance">Thayanne Oliveira</h1>
-            <h2 className="text-3xl md:text-5xl font-bold text-muted-foreground text-balance">Full stack Developer</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-muted-foreground text-balance">
+              {displayedText}
+            </h2>
+            {/* <h2 className="text-3xl md:text-5xl font-bold text-muted-foreground text-balance">Full stack Developer</h2> */}
           </div>
 
           <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
