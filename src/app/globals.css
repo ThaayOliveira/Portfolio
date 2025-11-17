@@ -41,6 +41,16 @@
   --font-jetbrains-mono: "JetBrains Mono", monospace;
 }
 
+.background-gradient-text-accent {
+  background: linear-gradient(
+    90deg,
+    var(--sidebar),
+    var(--sidebar),
+    var(--chart-3)
+  );
+}
+
+
 .dark {
   --background: oklch(0.05 0.01 300);
   --foreground: oklch(0.98 0.005 300);
