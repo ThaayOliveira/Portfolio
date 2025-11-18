@@ -89,7 +89,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="hidden md:flex w-[280px] justify-end">
+          <div className="hidden md:flex w-[280px] lg:w-[320px] justify-end">
             <CircularText />
           </div>
         </div>
