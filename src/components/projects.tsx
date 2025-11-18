@@ -29,7 +29,7 @@ const projects = [
     title: "Macros - Contador de Calorias",
     description:
       "Mobile application developed with React Native and Firebase, designed to promote health and well-being within the community. The app calculates the Basal Metabolic Rate (BMR), Body Mass Index (BMI), and provides a personalized meal distribution plan, helping users define and track their goals effectively. With an intuitive interface and real-time data storage through Firebase, the project aims to simplify health monitoring and encourage healthier lifestyle habits.",
-    image: "/macros-telas.png",
+    image: "/macros.png",
     technologies: ["React native", "Firebase", "Typescript"],
     // github: "https://github.com",
     // demo: "vercel",
