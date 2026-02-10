@@ -46,17 +46,16 @@ export function Hero() {
             </div>
 
             <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-              I'm a Full Stack Developer focused on designing and building scalable, high-performance web applications
-              using modern technologies. I work across both front-end and back-end development to deliver complete,
-              efficient solutions.
+              Sou Desenvolvedora Full Stack e Analista de Dados, com foco em projetar e construir aplicações web escaláveis e de alto desempenho utilizando tecnologias modernas. 
+              Atuo tanto no front-end quanto no back-end para entregar soluções completas e eficientes.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Button size="lg" asChild>
-                <a href="#projects">View My Work</a>
+                <a href="#projects">Projetos</a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="#contact">Get In Touch</a>
+                <a href="#contact">Contato</a>
               </Button>
             </div>
 

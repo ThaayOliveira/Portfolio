@@ -15,7 +15,7 @@ export function Contact() {
           <div
             className={`text-center space-y-4 transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Get In Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Contato</h2>
             <div className="h-1 w-20 bg-accent rounded-full mx-auto" />
           </div>
 
@@ -24,18 +24,18 @@ export function Contact() {
             style={{ transitionDelay: "200ms" }}
           >
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              I’m currently looking for new challenges and opportunities to grow as a developer. Whether you’d like to discuss a potential project, have a question, or simply wish to connect, feel free to reach out. I’ll be glad to respond as soon as possible.
+              Para conversar sobre um projeto, tirar alguma dúvida ou simplesmente se conectar, fique à vontade para entrar em contato. Terei prazer em responder o mais breve possível.
             </p>
 
             <Button size="lg" asChild className="transition-transform hover:scale-105">
               <a href="mailto:thayanneoliveira2002@gmail.com">
                 <Mail className="h-5 w-5 mr-2" />
-                Contact
+                Contato
               </a>
             </Button>
 
             <div className="pt-8 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-4">Or find me on</p>
+              <p className="text-sm text-muted-foreground mb-4">Conexões</p>
               <div className="flex justify-center gap-6">
                 <a
                   href="https://github.com/ThaayOliveira"

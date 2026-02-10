@@ -6,11 +6,11 @@ import { Badge } from "@/components/ui/badge"
 
 const experiences = [
   {
-    title: "Junior Fullstack Developer",
+    title: "Fullstack Developer",
     company: "ZDOC",
     period: "2024 — Present",
     description:
-      "I have worked on the development of complete systems using different stacks, such as PHP with Laravel, participating in everything from data modeling to the delivery of complex functionalities. I developed robust solutions with Java (Spring Boot) on the back-end, and with TypeScript, React, and Next.js on the front-end, building modern, responsive, and scalable applications. In addition, I implemented CI/CD pipelines using GitHub Actions to automate testing and deployment processes, and utilized Kubernetes and ArgoCD to manage and automate application deployments, ensuring reliability and scalability in production environments. Additionally, I handled other demands with a focus on data analysis, utilizing Power BI to create interactive dashboards, customized reports, and generate strategic insights to support decision-making. To complement my technical background, I completed courses focused on microdata processing and the R programming language, enhancing my ability to work with large volumes of data and perform statistical analysis.",
+      "Atuei no desenvolvimento de sistemas completos utilizando diferentes stacks de tecnologia, como PHP com Laravel, participando de todas as etapas — desde a modelagem de dados até a entrega de funcionalidades complexas. Desenvolvi soluções robustas no back-end com Java (Spring Boot) e construí aplicações modernas, responsivas e escaláveis no front-end utilizando TypeScript, React e Next.js. Além disso, implementei pipelines de CI/CD com GitHub Actions para automatizar processos de testes e deploy, e utilizei Kubernetes e ArgoCD para gerenciar e automatizar a implantação de aplicações, garantindo confiabilidade e escalabilidade em ambientes de produção. Também atuei em demandas com foco em análise de dados, utilizando Power BI para criar dashboards interativos, relatórios personalizados e gerar insights estratégicos para apoiar a tomada de decisão. Para complementar minha base técnica, concluí cursos com foco em processamento de microdados e na linguagem R, ampliando minha capacidade de trabalhar com grandes volumes de dados e realizar análises estatísticas.",
     technologies: ["React", "Java", "PostgreSQL", "Javascript", "Docker", "PHP", "Python", "Next.js", "Kubernetes", "Argo", "Power BI", "Github Actions"],
   },
   {
@@ -18,7 +18,7 @@ const experiences = [
     company: "TAOS STUDIO",
     period: "2022 — 2023",
     description:
-      "Built and maintained websites and landing pages focused on performance and user experience, using React, Next.js, JavaScript, and WordPress with Elementor to create visually appealing and functional interfaces aligned with clients needs and branding.",
+      "Construção e manutenção de sites e landing pages com foco em performance e experiência do usuário, utilizando React, Next.js, JavaScript e WordPress com Elementor para criar interfaces visualmente atraentes, funcionais e alinhadas às necessidades e identidade visual dos clientes.",
     technologies: ["Next.js", "React", "Wordpress Elementor"],
   },
   {
@@ -26,7 +26,7 @@ const experiences = [
     company: "Freelancer",
     period: "2022 - 2023",
     description:
-      "Developed responsive websites and web applications for various clients. Collaborated with designers to create pixel-perfect implementations.",
+      "Desenvolvimento de sites e aplicações web responsivos para diversos clientes. Colaboração com designers para criar implementações ao design, com atenção aos mínimos detalhes.",
     technologies: ["React", "Javascript", "Wordpress Elementor"],
   },
 ]
@@ -59,7 +59,7 @@ export function Experience() {
           className={`space-y-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Experience</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Experiência</h2>
             <div className="h-1 w-20 bg-accent rounded-full" />
           </div>
 

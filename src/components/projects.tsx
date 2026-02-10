@@ -71,7 +71,7 @@ export function Projects() {
           className={`space-y-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Projetos</h2>
             <div className="h-1 w-20 bg-accent rounded-full" />
           </div>
 
