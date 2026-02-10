@@ -30,27 +30,24 @@ export function About() {
           className={`space-y-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Sobre mim</h2>
             <div className="h-1 w-20 bg-accent rounded-full" />
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                Hello! I'm Thayanne, a Full Stack Developer passionate about creating innovative solutions for the web. My journey in web development started back in 2022, when I decided to build my first website. 
-                Since then, I’ve been continuously working and improving my skills by learning and mastering new technologies.
+                Olá! Sou desenvolvedora de software com 5 anos de experiência. Desenvolvedora Full Stack, atualmente cursando Ciência da Computação, apaixonada por criar soluções inovadoras para a web.
               </p>
               <p>
-                My main focus these days is building accessible products to meet the demand of customers who are satisfied with my work.
+                Atualmente, meu foco principal é construir produtos acessíveis que atendam às necessidades dos clientes e garantam satisfação com meu trabalho.
               </p>
-              <p>
-                Always seeking to improve and move forward with technologies.
-              </p>
+
             </div>
 
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Here are a few technologies I've been working with recently:
+                Aqui estão algumas tecnologias com as quais tenho trabalhado recentemente:
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {[
@@ -87,5 +84,5 @@ export function About() {
       </div>
     </section>
   )
-}   
+}
 

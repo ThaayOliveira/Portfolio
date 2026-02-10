@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Thayanne Oliveira - Fullstack Developer",
+  title: "Thayanne Oliveira - Fullstack Developer and Data Analyst",
   description:
     "Fullstack developer specializing in building exceptional digital experiences with React, Node.js, and modern web technologies.",
   generator: "v0.app",
