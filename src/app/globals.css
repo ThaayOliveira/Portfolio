@@ -225,3 +225,31 @@
 .animate-scroll-slow:hover {
   animation-play-state: paused;
 }
+
+
+
+
+/* Scrollbar usando o accent do tema */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--chart-3);
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ring);
+  border-color: var(--ring);
+}
+
+
+
+
