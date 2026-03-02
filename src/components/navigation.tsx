@@ -81,7 +81,7 @@ export function Navigation() {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in bg-background rounded-lg px-4 border border-border">
+          <div className="md:hidden mt-6 pt-3 pb-4 flex flex-col gap-4 animate-fade-in bg-background rounded-lg px-4 border border-border">
             {navItems.map((item) => (
               <a
                 key={item.name}

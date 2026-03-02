@@ -31,11 +31,12 @@ export function Hero() {
   }, [isVisible])
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20 background-gradient-text-accent">
-      <div className="container mx-auto max-w-5xl">
-        <div className="flex items-center gap-12">
+    <section className="min-h-screen flex items-center px-6 pt-20 background-gradient-text-accent">
+      <div className="container mx-auto max-w-7xl">
+        <div className="flex flex-col md:flex-row items-center">
           <div
-            className={`flex-1 space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`w-full md:w-1/2 space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
           >
             <div className="space-y-4">
               <p className="text-accent text-sm font-mono">Hi, my name is</p>
@@ -46,7 +47,7 @@ export function Hero() {
             </div>
 
             <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-              Sou Desenvolvedora Full Stack e Analista de Dados, com foco em projetar e construir aplicações web escaláveis e de alto desempenho utilizando tecnologias modernas. 
+              Sou Desenvolvedora Full Stack e Analista de Dados, com foco em projetar e construir aplicações web escaláveis e de alto desempenho utilizando tecnologias modernas.
               Atuo tanto no front-end quanto no back-end para entregar soluções completas e eficientes.
             </p>
 
@@ -88,7 +89,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="hidden md:flex w-[280px] lg:w-[320px] justify-end">
+          <div className="hidden md:flex w-1/2 justify-end items-center pr-10 lg:pr-20">
             <CircularText />
           </div>
         </div>
