@@ -37,7 +37,7 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                Olá! Sou desenvolvedora de software com 5 anos de experiência. Desenvolvedora Full Stack, atualmente cursando Ciência da Computação, apaixonada por criar soluções inovadoras para a web.
+                Olá! Sou desenvolvedora de software com 5 anos de experiência. Desenvolvedora Full Stack, atualmente cursando Ciência da Computação.
               </p>
               <p>
                 Atualmente, meu foco principal é construir produtos acessíveis que atendam às necessidades dos clientes e garantam satisfação com meu trabalho.
@@ -52,7 +52,8 @@ export function About() {
               <div className="grid grid-cols-2 gap-3">
                 {[
                   "Java",
-                  "PHP",
+                  "C# .NET",
+                  "PHP Laravel",
                   "C",
                   "C++",
                   "Python",
@@ -61,11 +62,12 @@ export function About() {
                   "React",
                   "Next.js",
                   "Node.js",
-                  "SQL",
-                  "Firebase",
+                  "Oracle",
+                  "Supabase",
                   "PostgreSQL",
                   "MongoDB",
                   "Docker",
+                  "Kubernetes",
                   "Power BI",
                 ].map((tech, index) => (
                   <div

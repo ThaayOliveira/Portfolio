@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   description:
     "Fullstack developer specializing in building exceptional digital experiences with React, Node.js, and modern web technologies.",
   generator: "v0.app",
+
+    icons: {
+    icon: "/favicon.ico"
+  },
 }
 
 export default function RootLayout({

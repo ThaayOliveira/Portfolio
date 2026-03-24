@@ -13,7 +13,7 @@ export function TechCarousel() {
     { name: "MongoDB", icon: "🍃" },
     { name: "Docker", icon: "🐳" },
     { name: "AWS", icon: "☁️" },
-    { name: "Tailwind", icon: "🎨" },   
+    { name: "C# .NET", icon: "🔷" },
     { name: "Python", icon: "🐍" },
   ]
 

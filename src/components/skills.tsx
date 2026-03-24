@@ -8,17 +8,17 @@ const skillCategories = [
   {
     title: "Frontend",
     icon: Code2,
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Javascript", "Vue.js", "React Native"],
+    skills: ["React", "Next.js", "TypeScript", "Javascript", "Vue.js", "React Native"],
   },
   {
     title: "Backend",
     icon: Database,
-    skills: ["Java", "Node.js", "PostgreSQL", "C#", "C", "C++", "Python", "REST APIs"],
+    skills: ["Java", "Node.js", "PostgreSQL", "C# .NET", "C", "C++", "Python"],
   },
   {
     title: "DevOps & Cloud",
     icon: Cloud,
-    skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Github Actions", "Argo", "Firebase", "MongoDB", "Oracle", "Supabase"],
+    skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Github Actions", "Zabbix", "Grafana", "Prometheus", "Argo", "Firebase", "MongoDB", "Oracle", "Supabase", "Azure"],
   },
   {
     title: "Tools & Others",

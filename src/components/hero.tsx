@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
-import { CircularText } from "@/components/circular-text-hero"
+import { motion } from "framer-motion"
+import { CircularText } from "./circular-text-hero"
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -39,7 +40,7 @@ export function Hero() {
               }`}
           >
             <div className="space-y-4">
-              <p className="text-accent text-sm font-mono">Hi, my name is</p>
+              <p className="text-accent text-sm font-mono">Olá, meu nome é</p>
               <h1 className="text-5xl md:text-7xl font-bold text-foreground text-balance">Thayanne Oliveira</h1>
               <h2 className="text-2xl md:text-4xl font-bold text-muted-foreground text-balance">
                 {displayedText}
@@ -47,8 +48,9 @@ export function Hero() {
             </div>
 
             <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-              Sou Desenvolvedora Full Stack e Analista de Dados, com foco em projetar e construir aplicações web escaláveis e de alto desempenho utilizando tecnologias modernas.
-              Atuo tanto no front-end quanto no back-end para entregar soluções completas e eficientes.
+              Sou Desenvolvedora Full Stack, Analista de Dados e atuo também com DevSecOps.
+              Tenho experiência em integrar práticas de segurança ao ciclo de desenvolvimento, automação de pipelines, monitoramento e otimização de infraestrutura, garantindo eficiência, confiabilidade e qualidade nas entregas.
+
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -89,8 +91,28 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="hidden md:flex w-1/2 justify-end items-center pr-10 lg:pr-20">
-            <CircularText />
+
+          <div className="hidden md:flex w-1/2 justify-end items-center relative">
+
+            {/* glow atrás do gato */}
+            <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-[100px] rounded-full" />
+
+            {/* <motion.img
+              src="https://media.giphy.com/media/oz45ELYgMoYVsZqmor/giphy.gif"
+              alt="Coding Cat"
+              className="w-72 lg:w-[420px] relative z-10"
+              initial={{ opacity: 0, x: 80 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            /> */}
+
+            {/* <div className="hidden md:flex w-1/2 justify-end items-center relative h-[400px]">
+              <LanguagesHero />
+            </div> */}
+
+            <div className="hidden md:flex w-1/2 justify-end items-center pr-10 lg:pr-20">
+              <CircularText />
+            </div>
           </div>
         </div>
 
