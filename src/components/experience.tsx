@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 
 const experiences = [
   {
-    title: "Fullstack Developer",
+    title: "Fullstack Developer e DevOps",
     company: "ZDOC",
     period: "2024 — Present",
     description:
@@ -31,69 +31,52 @@ const experiences = [
   },
 ]
 
+
 export function Experience() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <section id="experience" ref={sectionRef} className="py-28 px-6 bg-muted/30 scroll-mb-40">
+    <section id="experiencia" className="py-24 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        <div
-          className={`space-y-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-        >
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Experiência</h2>
-            <div className="h-1 w-20 bg-accent rounded-full" />
-          </div>
+        <div className="space-y-4 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground whitespace-nowrap">
+            Experiência
+          </h2>
+          <div className="h-1 w-20 bg-accent rounded-full" />
+        </div>
 
-          <div className="space-y-6">
-            {experiences.map((exp, index) => (
-              <Card
-                key={index}
-                className="p-6 md:p-8 hover:shadow-lg transition-all duration-300 hover:border-accent/50"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="space-y-4">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
-                      <p className="text-accent font-medium">{exp.company}</p>
-                    </div>
-                    <p className="text-sm text-muted-foreground font-mono">{exp.period}</p>
-                  </div>
-
-                  <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
+        <div className="space-y-12">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="group grid md:grid-cols-4 gap-4 md:gap-8"
+            >
+              <div className="text-sm text-muted-foreground font-mono">
+                {exp.period}
+              </div>
+              <div className="md:col-span-3 space-y-3">
+                <h3 className="text-foreground font-medium">
+                  {exp.title} ·{" "}
+                  <span className="text-primary inline-flex items-center gap-1">
+                    {exp.company}
+                  </span>
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {exp.description}
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {exp.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 text-xs font-medium rounded-full bg-background text-primary border border-primary/20 cursor-default transition-all duration-300 ease-out hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:shadow-lg hover:shadow-primary/25"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              </Card>
-            ))}
-          </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+    </section >
   )
 }
