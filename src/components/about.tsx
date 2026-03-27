@@ -62,6 +62,8 @@ export function About() {
                   "React",
                   "Next.js",
                   "Node.js",
+                  "Angular",
+                  "Kotlin",
                   "Oracle",
                   "Supabase",
                   "PostgreSQL",

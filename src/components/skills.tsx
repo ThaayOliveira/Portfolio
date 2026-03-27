@@ -13,7 +13,7 @@ const skillCategories = [
   {
     title: "Backend",
     icon: Database,
-    skills: ["Java", "Node.js", "PostgreSQL", "C# .NET", "C", "C++", "Python", "Redis", "RabbitMQ"],
+    skills: ["Java", "Node.js", "PostgreSQL", "C# .NET", "C", "C++", "Python", "Redis", "RabbitMQ", "Angular", "Kotlin"],
   },
   {
     title: "DevOps & Cloud",
