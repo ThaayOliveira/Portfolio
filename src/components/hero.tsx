@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
-import { motion } from "framer-motion"
 import { CircularText } from "./circular-text-hero"
 
 export function Hero() {
@@ -36,12 +35,12 @@ export function Hero() {
       <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row items-center">
           <div
-            className={`w-full md:w-1/2 space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            className={`w-full md:w-1/2 pr-8 space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
           >
-            <div className="space-y-4">
+            <div className="space-y-4"> 
               <p className="text-accent text-sm font-mono">Olá, meu nome é</p>
-              <h1 className="text-5xl md:text-7xl font-bold text-foreground text-balance">Thayanne Oliveira</h1>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-bold text-foreground text-balance">Thayanne Oliveira</h1>
               <h2 className="text-2xl md:text-4xl font-bold text-muted-foreground text-balance">
                 {displayedText}
               </h2>
