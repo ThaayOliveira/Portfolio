@@ -5,43 +5,9 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github } from "lucide-react"
+import Link from "next/link"
+import { projects } from "@/data/projects"
 
-const projects = [
-  {
-    title: "Portal de Serviços",
-    description:
-      "Statewide service management system developed to organize and evaluate public services across multiple government agencies and categories. The platform allows centralized control of registered institutions, service types, and performance indicators, enabling data-driven assessments enhanced by Google Analytics integration. Designed with scalability and usability in mind, the system streamlines the monitoring of service quality and supports decision-making processes aimed at improving public management efficiency.",
-    image: "/portal-de-servicos.png",
-    technologies: ["Next.js", "Java", "PostgreSQL", "Typescript", "Docker", "Kubernetes", "Argo", "Github Actions", "Python"],
-    // github: "https://github.com",
-    // demo: "https://example.com",
-  },
-  {
-    title: "Locadora",
-    description:
-      "Collaborative task management application with real-time updates and team workspaces, developed as part of a rental store system designed to manage both new and classic movies and games. The platform includes a shopping cart system for purchasing titles, as well as user account creation and management features, providing a complete experience for browsing, renting, and buying entertainment content.",
-    image: "/locadora.png",
-    technologies: ["React", "Express", "MongoDB", "Socket.io", "AWS"],
-    // github: "https://github.com/ThaayOliveira/projeto-locadora",
-    // demo: "vercel",
-  },
-  {
-    title: "Macros - Contador de Calorias",
-    description:
-      "Mobile application developed with React Native and Firebase, designed to promote health and well-being within the community. The app calculates the Basal Metabolic Rate (BMR), Body Mass Index (BMI), and provides a personalized meal distribution plan, helping users define and track their goals effectively. With an intuitive interface and real-time data storage through Firebase, the project aims to simplify health monitoring and encourage healthier lifestyle habits.",
-    image: "/macros.png",
-    technologies: ["React native", "Firebase", "Typescript"],
-    // github: "https://github.com",
-    // demo: "vercel",
-  },
-  {
-    title: "Power BI",
-    description:
-      "Real-time analytics dashboard designed to track and visualize key business metrics. Developed using Power BI for dynamic data visualization and automated reporting, integrating data from PostgreSQL and Oracle databases through Python scripts for seamless updates and process automation. The user interface and layout were carefully designed in Figma, ensuring a clean, intuitive, and responsive experience for end users.",
-    image: "/power-bi.png",
-    technologies: ["Power BI", "Oracle", "Python", "Figma"],
-  },
-]
 
 export function Projects() {
   const [isVisible, setIsVisible] = useState(false)
@@ -65,7 +31,7 @@ export function Projects() {
   }, [])
 
   return (
-    <section id="projects" ref={sectionRef} className="py-32 px-6 bg-muted/30">
+    <section id="projects" ref={sectionRef} className="py-26 px-6 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <div
           className={`space-y-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
@@ -76,7 +42,7 @@ export function Projects() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
+            {projects.slice(0, 4).map((project, index) => (
               <Card
                 key={index}
                 className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-accent/50 group"
@@ -106,23 +72,15 @@ export function Projects() {
                     ))}
                   </div>
 
-                  <div className="flex gap-3 pt-2">
-                    {/* <Button variant="outline" size="sm" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button> */}
-                    {/* <Button size="sm" asChild>
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button> */}
-                  </div>
                 </div>
               </Card>
             ))}
+          </div>
+
+          <div className="flex justify-center pt-4">
+            <Button size="lg" asChild>
+              <Link href="/projects">Ver mais projetos</Link>
+            </Button>
           </div>
         </div>
       </div>

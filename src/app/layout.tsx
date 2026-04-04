@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
 import { Suspense } from "react"
 import "./globals.css"
+import { Navigation } from "@/components/navigation"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,7 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`font-sans ${inter.variable} ${jetbrainsMono.variable} antialiased`}>
-        <Suspense fallback={null}>{children}</Suspense>
+        <Navigation />
+        {/* <Suspense fallback={null}> */}
+          {children}
+        {/* </Suspense> */}
       </body>
     </html>
   )
