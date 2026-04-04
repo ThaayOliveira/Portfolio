@@ -30,9 +30,9 @@ export function ProjectsList({ projects }: ProjectsListProps) {
               {project.description}
             </p>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 text-black">
               {project.technologies.map((tech: string) => (
-                <Badge key={tech}>{tech}</Badge>
+                <Badge key={tech} variant="secondary">{tech}</Badge>
               ))}
             </div>
           </div>
