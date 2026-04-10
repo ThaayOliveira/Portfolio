@@ -4,6 +4,7 @@ import { Inter, JetBrains_Mono } from "next/font/google"
 import { Suspense } from "react"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
+import ClickSparkWrapper from "@/components/click-spark"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,10 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`font-sans ${inter.variable} ${jetbrainsMono.variable} antialiased`}>
-        <Navigation />
+        <ClickSparkWrapper>
+          <Navigation />
         {/* <Suspense fallback={null}> */}
           {children}
         {/* </Suspense> */}
+        </ClickSparkWrapper>
       </body>
     </html>
   )

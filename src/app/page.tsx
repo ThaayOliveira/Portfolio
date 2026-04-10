@@ -6,18 +6,21 @@ import { Skills } from "@/components/skills"
 import { Contact } from "@/components/contact"
 import { Navigation } from "@/components/navigation"
 import { TechCarousel } from "@/components/tech-carousel"
+import ClickSparkWrapper from "@/components/click-spark"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <About />
-      <Experience />
-      <Skills />
-      <TechCarousel />
-      <Projects />
-      <Contact />
-    </main>
-  )
+    <ClickSparkWrapper >
+      <main className="min-h-screen">
+        <Navigation />
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <TechCarousel />
+        <Projects />
+        <Contact />
+      </main>
+    </ClickSparkWrapper>
+  );
 }
