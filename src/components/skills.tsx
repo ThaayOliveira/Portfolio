@@ -23,7 +23,7 @@ const skillCategories = [
   {
     title: "Tools & Others",
     icon: Wrench,
-    skills: ["Git", "Power BI", "Figma", "Linux"],
+    skills: ["Git", "Power BI", "Figma", "Linux", "Apache Airflow"],
   },
 ]
 
