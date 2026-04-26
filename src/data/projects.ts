@@ -4,7 +4,7 @@ export const projects = [
     description:
       "Statewide service management system developed to organize and evaluate public services across multiple government agencies and categories. The platform allows centralized control of registered institutions, service types, and performance indicators, enabling data-driven assessments enhanced by Google Analytics integration. Designed with scalability and usability in mind, the system streamlines the monitoring of service quality and supports decision-making processes aimed at improving public management efficiency.",
     image: "/portal-de-servicos.png",
-    technologies: ["Java", "Next.js", "PostgreSQL", "Typescript", "Docker", "Kubernetes", "Argo", "Github Actions", "Python", "Prometheus", "Grafana", "Zabbix", "Analytics", "Figma"],
+    technologies: ["Java", "Next.js", "PostgreSQL", "Typescript", "Docker", "Kubernetes", "Argo", "Github Actions", "Python", "Prometheus", "Grafana", "Zabbix", "Analytics", "Figma", "Axios"],
     // github: "https://github.com",
     // demo: "https://example.com",
   },
@@ -13,7 +13,7 @@ export const projects = [
     description:
       "Collaborative task management application with real-time updates and team workspaces, developed as part of a rental store system designed to manage both new and classic movies and games. The platform includes a shopping cart system for purchasing titles, as well as user account creation and management features, providing a complete experience for browsing, renting, and buying entertainment content.",
     image: "/locadora.png",
-    technologies: ["Java", "React", "Next.js", "AWS", "Analytics"],
+    technologies: ["Java", "React", "Next.js", "AWS", "Analytics", "Axios"],
     // github: "https://github.com/ThaayOliveira/projeto-locadora",
     // demo: "vercel",
   },
@@ -40,4 +40,14 @@ export const projects = [
     image: "/e-commerce.png",
     technologies: ["C# .NET", "React", "Next.js", "PostgreSQL", "Typescript", "Docker", "Figma"],
   },
+  {
+    title: "Diagnóstico Infra TI",
+    description:
+      "Aplicação full stack desenvolvida para centralizar, digitalizar e analisar dados de infraestrutura tecnológica de órgãos e instituições. O sistema substitui processos manuais baseados em planilhas Excel por uma plataforma web moderna, permitindo cadastro estruturado, importação de dados, visualização gerencial e indicadores estratégicos em tempo real. A solução conta com dashboard interativo, gráficos gerenciais, busca inteligente, persistência automática de rascunho em formulários extensos e integração completa com banco de dados relacional.",
+    image: "/diagnostico-infra-ti.png",
+    technologies: ["Next.js API Routes", "React", "Axios", "PostgreSQL", "Typescript", "Docker", "Figma", "Prisma ORM", "ExcelJS"],
+  },
 ]
+
+
+
