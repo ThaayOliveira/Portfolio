@@ -1,26 +1,27 @@
 export function CircularText() {
-  const text = " JAVA • TYPESCRIPT • NEXT.JS • C# • PHP • REACT • NODE.JS •"
-  const characters = text.split("")
+  const text =
+    " JAVA • C#/.NET • KOTLIN • PYTHON • NEXT.JS • TYPESCRIPT • AWS • DEVOPS • "
 
   return (
-    <div className="relative w-44 h-44 hidden md:flex items-center justify-center">
+    <div className="relative w-64 h-64 hidden md:flex items-center justify-center">
       <svg
         viewBox="0 0 200 200"
         className="w-full h-full animate-spin"
-        style={{ animationDuration: "10s" }}
+        style={{ animationDuration: "18s" }}
       >
         <defs>
           <path
             id="circlePath"
-            d="M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+            d="M 100, 100 m -86, 0 a 86,86 0 1,1 172,0 a 86,86 0 1,1 -172,0"
             fill="none"
           />
         </defs>
+
         <text
-          fontSize="12"
-          fontWeight="bold"
-          letterSpacing="2"
-          className="fill-muted-foreground"
+          fontSize="11"
+          fontWeight="600"
+          letterSpacing="1.5"
+          fill="rgba(255, 255, 255, 0.75)"
         >
           <textPath href="#circlePath" startOffset="0%">
             {text}
