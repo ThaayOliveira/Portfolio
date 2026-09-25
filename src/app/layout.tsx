@@ -1,10 +1,11 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
-import { Suspense } from "react"
 import "./globals.css"
+
 import { Navigation } from "@/components/navigation"
 import ClickSparkWrapper from "@/components/click-spark"
+import { LanguageProvider } from "@/context/LanguageContext"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,8 +25,8 @@ export const metadata: Metadata = {
     "Fullstack developer specializing in building exceptional digital experiences with React, Node.js, and modern web technologies.",
   generator: "v0.app",
 
-    icons: {
-    icon: "/favicon.ico"
+  icons: {
+    icon: "/favicon.ico",
   },
 }
 
@@ -36,13 +37,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`font-sans ${inter.variable} ${jetbrainsMono.variable} antialiased`}>
-        <ClickSparkWrapper>
-          <Navigation />
-        {/* <Suspense fallback={null}> */}
-          {children}
-        {/* </Suspense> */}
-        </ClickSparkWrapper>
+      <body
+        className={`font-sans ${inter.variable} ${jetbrainsMono.variable} antialiased`}
+      >
+        <LanguageProvider>
+          <ClickSparkWrapper>
+            <Navigation />
+
+            {children}
+          </ClickSparkWrapper>
+        </LanguageProvider>
       </body>
     </html>
   )

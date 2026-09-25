@@ -1,34 +1,49 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { useLanguage } from "@/context/LanguageContext"
 
-const lines = [
-  {
-    key: "role",
-    value: '"Senior Full Stack Developer"',
-  },
-  {
-    key: "backend",
-    value: '["Java", "Spring Boot", "C#/.NET", "Kotlin", "Python"]',
-  },
-  {
-    key: "frontend",
-    value: '["Next.js", "TypeScript"]',
-  },
-  {
-    key: "cloud",
-    value: '["AWS"]',
-  },
-  {
-    key: "devops",
-    value: '["Docker", "Kubernetes", "CI/CD"]',
-  },
-]
+const technologies = {
+  backend: '["Java", "Spring Boot", "C#/.NET", "Kotlin", "Python"]',
+  frontend: '["Next.js", "TypeScript"]',
+  cloud: '["AWS"]',
+  devops: '["Docker", "Kubernetes", "CI/CD"]',
+}
 
 export function CodeTerminal() {
   const [visibleLines, setVisibleLines] = useState(0)
 
+  const { language } = useLanguage()
+
+  const lines = [
+    {
+      key: "role",
+      value:
+        language === "pt"
+          ? '"Desenvolvedora Full Stack Sênior"'
+          : '"Senior Full Stack Developer"',
+    },
+    {
+      key: "backend",
+      value: technologies.backend,
+    },
+    {
+      key: "frontend",
+      value: technologies.frontend,
+    },
+    {
+      key: "cloud",
+      value: technologies.cloud,
+    },
+    {
+      key: "devops",
+      value: technologies.devops,
+    },
+  ]
+
   useEffect(() => {
+    setVisibleLines(0)
+
     const timers = lines.map((_, index) =>
       setTimeout(() => {
         setVisibleLines(index + 1)
@@ -38,7 +53,7 @@ export function CodeTerminal() {
     return () => {
       timers.forEach(clearTimeout)
     }
-  }, [])
+  }, [language])
 
   return (
     <div className="hidden md:flex items-center justify-center">
@@ -48,6 +63,7 @@ export function CodeTerminal() {
 
         <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/50 shadow-2xl backdrop-blur-xl">
 
+          {/* Terminal header */}
           <div className="flex items-center gap-2 border-b border-white/10 px-5 py-4">
             <span className="h-3 w-3 rounded-full bg-red-400/70" />
             <span className="h-3 w-3 rounded-full bg-yellow-400/70" />
@@ -58,6 +74,7 @@ export function CodeTerminal() {
             </span>
           </div>
 
+          {/* Code */}
           <div className="min-h-[340px] px-6 py-6 font-mono text-sm leading-7">
 
             <div>
@@ -111,13 +128,17 @@ export function CodeTerminal() {
             </div>
           </div>
 
+          {/* Status */}
           <div className="border-t border-white/10 px-5 py-3">
             <div className="flex items-center gap-2 text-xs text-white/35">
               <span className="h-2 w-2 rounded-full bg-green-400/70 animate-pulse" />
 
-              Available for opportunities
+              {language === "pt"
+                ? "Disponível para oportunidades"
+                : "Available for opportunities"}
             </div>
           </div>
+
         </div>
       </div>
     </div>

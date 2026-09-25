@@ -3,10 +3,11 @@
 import { useEffect, useRef, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Code2, Database, Cloud, Wrench } from "lucide-react"
+import { useLanguage } from "@/context/LanguageContext"
 
 const skillCategories = [
   {
-    title: "Frontend",
+    key: "frontend",
     icon: Code2,
     skills: [
       "Next.js",
@@ -17,7 +18,7 @@ const skillCategories = [
     ],
   },
   {
-    title: "Backend",
+    key: "backend",
     icon: Database,
     skills: [
       "Java",
@@ -30,7 +31,7 @@ const skillCategories = [
     ],
   },
   {
-    title: "Cloud & DevOps",
+    key: "cloud",
     icon: Cloud,
     skills: [
       "AWS",
@@ -46,7 +47,7 @@ const skillCategories = [
     ],
   },
   {
-    title: "Databases & Tools",
+    key: "database",
     icon: Wrench,
     skills: [
       "PostgreSQL",
@@ -58,11 +59,14 @@ const skillCategories = [
       "Power BI",
     ],
   },
-]
+] as const
 
 export function Skills() {
   const [isVisible, setIsVisible] = useState(false)
+
   const sectionRef = useRef<HTMLElement>(null)
+
+  const { t } = useLanguage()
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -82,19 +86,35 @@ export function Skills() {
     return () => observer.disconnect()
   }, [])
 
+  const categoryTitles = {
+    frontend: t.skills.frontend,
+    backend: t.skills.backend,
+    cloud: "Cloud & DevOps",
+    database: t.skills.database,
+  }
+
   return (
-    <section id="skills" ref={sectionRef} className="py-32 px-6">
+    <section
+      id="skills"
+      ref={sectionRef}
+      className="py-32 px-6"
+    >
       <div className="container mx-auto max-w-5xl">
         <div
-          className={`space-y-12 transition-all duration-1000 ${
-            isVisible
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"
-          }`}
+          className={`
+            space-y-12
+            transition-all
+            duration-1000
+            ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }
+          `}
         >
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Skills & Technologies
+              {t.skills.title}
             </h2>
 
             <div className="h-1 w-20 bg-accent rounded-full" />
@@ -106,7 +126,7 @@ export function Skills() {
 
               return (
                 <Card
-                  key={category.title}
+                  key={category.key}
                   className="p-6 hover:shadow-lg transition-all duration-300 hover:border-accent/50"
                 >
                   <div className="space-y-5">
@@ -116,7 +136,7 @@ export function Skills() {
                       </div>
 
                       <h3 className="text-xl font-bold text-foreground">
-                        {category.title}
+                        {categoryTitles[category.key]}
                       </h3>
                     </div>
 
