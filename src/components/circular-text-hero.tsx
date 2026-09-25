@@ -1,3 +1,5 @@
+"use client"
+
 export function CircularText() {
   const text =
     " JAVA • C#/.NET • KOTLIN • PYTHON • NEXT.JS • TYPESCRIPT • AWS • DEVOPS • "
@@ -23,7 +25,10 @@ export function CircularText() {
           letterSpacing="1.5"
           fill="rgba(255, 255, 255, 0.75)"
         >
-          <textPath href="#circlePath" startOffset="0%">
+          <textPath
+            href="#circlePath"
+            startOffset="0%"
+          >
             {text}
           </textPath>
         </text>

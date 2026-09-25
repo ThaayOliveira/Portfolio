@@ -4,12 +4,15 @@ import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 import { CodeTerminal } from "./CodeTerminal"
+import { useLanguage } from "@/context/LanguageContext"
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
   const [displayedText, setDisplayedText] = useState("")
 
-  const fullText = "Senior Full Stack Developer"
+  const { language, t } = useLanguage()
+
+  const fullText = t.hero.role
 
   useEffect(() => {
     setIsVisible(true)
@@ -17,6 +20,8 @@ export function Hero() {
 
   useEffect(() => {
     if (!isVisible) return
+
+    setDisplayedText("")
 
     let index = 0
 
@@ -30,7 +35,7 @@ export function Hero() {
     }, 120)
 
     return () => clearInterval(interval)
-  }, [isVisible])
+  }, [isVisible, fullText, language])
 
   return (
     <section
@@ -49,7 +54,6 @@ export function Hero() {
     >
       <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
-
           <div
             className={`
               w-full
@@ -57,19 +61,20 @@ export function Hero() {
               space-y-8
               transition-all
               duration-1000
-              ${isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
+              ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }
             `}
           >
             <div className="space-y-4">
               <p className="text-accent text-sm font-mono">
-                Olá, meu nome é
+                {t.hero.greeting}
               </p>
 
               <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-foreground text-balance">
-                Thayanne Oliveira
+                {t.hero.name}
               </h1>
 
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-muted-foreground text-balance min-h-[48px]">
@@ -78,13 +83,13 @@ export function Hero() {
             </div>
 
             <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-              Especialista em desenvolvimento de software com foco em Java, C#/.NET, Kotlin, Python, Next.js e TypeScript. Atuo na construção de soluções escaláveis de ponta a ponta, arquitetura de aplicações, integração de sistemas e automação com práticas de DevOps e CI/CD.
+              {t.hero.description}
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Button size="lg" asChild>
                 <a href="#projects">
-                  Ver Projetos
+                  {t.hero.buttonProjects}
                 </a>
               </Button>
 
@@ -95,7 +100,7 @@ export function Hero() {
                 asChild
               >
                 <a href="#contact">
-                  Contato
+                  {t.hero.buttonContact}
                 </a>
               </Button>
             </div>
@@ -131,7 +136,6 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Terminal */}
           <div
             className={`
               hidden
@@ -145,13 +149,13 @@ export function Hero() {
               transition-all
               duration-1000
               delay-300
-              ${isVisible
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-10"
+              ${
+                isVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-10"
               }
             `}
           >
-            {/* Glow */}
             <div className="absolute w-[450px] h-[450px] bg-purple-500/10 blur-[120px] rounded-full" />
 
             <div className="relative z-10 w-full flex justify-center lg:justify-end">
@@ -161,9 +165,11 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <a href="#about" aria-label="Scroll to about section">
+        <a
+          href="#about"
+          aria-label="Scroll to about section"
+        >
           <ArrowDown className="h-6 w-6 text-muted-foreground" />
         </a>
       </div>
